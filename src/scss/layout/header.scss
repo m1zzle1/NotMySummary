@@ -1,62 +1,105 @@
 // =====================================================================================================================
 .header {
-  width: 100%;
-  &.sticky {
-    // ..стили для липкого хедера
-  }
-  // .header__container
-  &__container {
-    height: rem($headerHeight);
-    display: flex;
-    align-items: center;
-  }
+  @include adaptiveClamp(padding-top, 27, 20, 1152, 768, 1);
+  @include adaptiveClamp(padding-bottom, 71, 0, 1152, 768, 1);
+}
+.menu__list {
+  gap: 30px;
 }
 // =====================================================================================================================
 
-// Burger
-/*
-.icon-menu {
-  display: none;
-  @include media(767) {
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  z-index: 1000;
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 100%;
+  }
+  &__item {
+    margin: 0 10px;
+    font-weight: $btnFontWeight;
+  }
+}
+
+.burger {
+  position: relative;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  &__line {
+    position: absolute;
     display: block;
-    position: relative;
-    width: rem(30);
-    height: rem(18);
-    cursor: pointer;
-    z-index: 5;
-    span,
-    &::before,
-    &::after {
-      content: "";
-      transition: all 300ms ease 0ms;
-      right: 0;
-      position: absolute;
-      width: 100%;
-      height: rem(2);
-      background-color: #000;
-    }
-    &::before {
+    width: 100%;
+    height: 3px;
+    background: $blackColor;
+    border-radius: 3px;
+    transition: all .3s ease;
+
+    &:nth-child(1) {
       top: 0;
     }
-    &::after {
-      bottom: 0;
+
+    &:nth-child(2) {
+      top: 8px;
     }
-    span {
-      top: calc(50% - rem(1));
+
+    &:nth-child(3) {
+      top: 16px;
     }
-    .menu-open & {
-      span {
-        width: 0;
-      }
-      &::before {
-        top: calc(50% - rem(1));
+  }
+    &.active {
+      span:nth-child(1) {
+      top: 8px;
+      transform: rotate(45deg);
+    }
+      span:nth-child(2) {
+        opacity: 0;
+    }
+      span:nth-child(3) {
+        top: 8px;
         transform: rotate(-45deg);
-      }
-      &::after {
-        bottom: calc(50% - rem(1));
-        transform: rotate(45deg);
-      }
     }
   }
 }
-*/
+
+@media (max-width: 768px) {
+  .menu {
+    height: auto;
+    justify-content: flex-end;
+    align-items: center;
+    &__list {
+      justify-content: flex-start;
+      align-items: flex-start;
+      transition: .4s all ease;
+      opacity: 0;
+      margin-right: 20px;
+    }
+    &__item {
+      margin: 10px 0;
+    }
+    &-open, &__list {
+      display: flex;
+    }
+  }
+}
+
+.menu {
+  @include adaptive_after(768px) {
+    display: none;
+  }
+}

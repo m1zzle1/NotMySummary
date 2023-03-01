@@ -1,0 +1,52 @@
+.featured-works {
+    padding: 30px 0 83px 0;
+    @include adaptiveClamp (padding-bottom, 83, 150, 1152, 767, 1);
+    &__container {
+        @include media(767) {
+            margin: 0 auto;
+            width: $minWidth;
+        }
+        width: $maxWidthContainer;
+        margin: 0 auto;
+    }
+    &__title {
+        margin-bottom: 30px;
+        @include media (767) {
+            text-align: center;
+        }
+    }
+    &__project {
+        @include media (767) {
+            flex-direction: column;
+        }
+        display: flex;
+        border-bottom: 3px solid $lightLightGrey;
+        padding-bottom: 25px;
+        margin-top: 20px;
+    }
+    .img__adapt {
+        @include adaptiveClamp (width, 246, 339, 1152, 767, 1);
+        @include adaptiveClamp (height, 180, 230, 1152, 767, 1)
+    }
+    &__project__information__title {
+        @include adaptiveClamp (margin-top, 0, 16, 1152, 767, 1);
+        @include adaptiveClamp (font-size, 30, 24, 1152, 767, 1)
+    }
+    &__project__shell__name {
+        @include adaptiveClamp (font-size, 18, 16, 1152, 767, 1);
+    }
+    &__project__description {
+        @include adaptiveClamp (max-width, 594, 344, 1152, 767, 1);
+    }
+    &__project__information {
+        @include adaptiveClamp (margin-left, 18, 10, 1152, 900, 1);
+        @include adaptiveClamp (margin-left, 18, 0 ,1152, 767, 1)
+    }
+    &__project__shell {
+        display: flex;
+        margin: 17px 0 16px 0;
+    }
+    span {
+        margin-left: 26px;
+    }
+}

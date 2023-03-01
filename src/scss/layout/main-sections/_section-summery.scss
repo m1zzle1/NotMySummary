@@ -1,0 +1,42 @@
+.summery {
+    align-items: center;
+    @include adaptiveClamp (margin-top, 158, 45, 1152, 767, 1);
+    @include adaptiveClamp (padding-top, 27, 0, 1152, 767, 1);
+    @include adaptiveClamp (padding-bottom, 71, 59, 1152, 768, 1);
+    @include media(767) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    display: flex;
+    justify-content: space-evenly;
+    .summery__about-me {
+      @include adaptiveClamp (width, 506, 316, 1152, 767, 1);
+      @include media(767) {
+        text-align: center;
+      }
+    }
+    &__about-me__title {
+      @include adaptiveClamp (width, 506, 316, 1152, 767, 1)
+    }
+    &__about-me__subtitle {
+      font-size: $paragraphFontSize;
+      margin: 40px 0 38px 0;
+    }
+    &__btn {
+      @include adaptiveClamp (width, 208, 208, 1152, 767, 1);
+      @include adaptiveClamp (height, 47, 47, 1152, 767, 1);
+      @include media(768) {
+      }
+      background-color: $redColor;
+      a {
+        color: $whiteColor;
+        font-size: $navHeader;
+      }
+    }
+    img {
+      @include adaptiveClamp (margin-bottom, 0, 43, 1152, 767, 1);
+      @include adaptiveClamp (width, 243, 170, 1152, 767, 1);
+      @include adaptiveClamp (height, 243, 170, 1152, 767, 1);
+    }
+}
+

@@ -1,0 +1,74 @@
+.rewies {
+    @include adaptiveClamp (padding-top, 27, 20, 1152, 768, 1);
+    @include adaptiveClamp (padding-bottom, 39, 22, 1152, 768, 1 );
+    background-color: $blueLightColor;
+    &__container {
+        max-width: $maxWidthContainer;
+        padding: 0;
+    }
+    &__title {
+        @include media(767) {
+            margin: 0 auto;
+        }
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title__more-posts {
+        @include media(767) {
+            margin: 0 auto;
+            margin-bottom: 15px;
+        }
+    }
+    &__title__more {
+        @include media(767) {
+            display: none;
+        }
+        font-weight: $paragraphFontWeight;
+        color: $blueColor;
+    }
+    &__units {
+        @include media(767) {
+            flex-direction: column;
+            margin: 0 auto;
+            width: fit-content;
+        }
+        display: flex;
+        justify-content: space-around;
+        max-width: 856px;
+    }
+    &__unit {
+        @include adaptiveClamp (margin-bottom, 0, 17, 1152, 767, 1);
+        @include adaptiveClamp (padding-top, 24, 12, 1152, 768,1);
+        @include adaptiveClamp (padding-right, 21, 8, 1152, 768,1);
+        @include adaptiveClamp (padding-bottom, 10, 22, 1152, 768,1);
+        @include adaptiveClamp (padding-left, 23, 19, 1152, 768,1);
+        @include adaptiveClamp (width, 418, 354, 1152, 768, 1);
+        @include adaptiveClamp (height, 295, 266, 1152, 768, 1);
+        background-color: $whiteColor;
+    }
+    &__unit__title {
+        @include adaptiveClamp (font-size, 26, 22, 1152, 768, 1)
+    }
+    &__unit__wrapper {
+        @include adaptiveClamp (margin-top, 25, 18, 1152,768, 1);
+        @include adaptiveClamp (margin-bottom, 35, 13, 1152, 768, 1);
+    }
+    &__unit__wrapper__title {
+        color:$primaryColor;
+        font-size: $paragraphFontSize + 2;
+    }
+    &__unit__wrapper__title:last-child {
+        margin-left: 30px;
+        position: relative;
+    }
+    &__unit__wrapper__title::before {
+        content: '';
+        display: block;
+        background-color: $blackColor;
+        width: 1px;
+        height: 21px;
+        position: absolute;
+        left: -15px;
+        top: 1px;
+    }
+}

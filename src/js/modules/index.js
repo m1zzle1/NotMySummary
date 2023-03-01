@@ -130,6 +130,22 @@ const menuClose = () => {
   html.classList.remove('menu-open')
 }
 
+const burger = document.querySelector('.burger');
+const menu = document.querySelector('.menu');
+const menuList = document.querySelector('.menu__list');
+
+burger.addEventListener('click', () => {
+  menu.classList.toggle('menu-open');
+  if(menu.classList.contains('menu-open')) {
+    menuList.style.opacity = 1
+    burger.classList.add('active')
+  } else {
+    menuList.style.opacity = 0
+    burger.classList.remove('active')
+  }
+
+});
+
 export {
   FLS,
   isWebp,

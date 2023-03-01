@@ -1,11 +1,23 @@
 <header class="header">
   <div class="header__container">
-    <a href="#" class="header__logo logo"></a>
-    <nav class="header__menu menu">
-      <ul class="menu__list">
-        <li class="menu__item"><a href="#" class="menu__link">Link</a></li>
+    <nav class="nav">
+      <ul>
+        <li><a class="page-link @@workActive"  href="works.html">Works</a></li>
+        <li><a class="page-link @@blogActive"  href="blog.html">Blog</a></li>
+        <li><a class="page-link @@contactActive"  href="index.html">Contact</a></li>
       </ul>
     </nav>
-    <!-- @@include('./iconMenu.html', {}) -->
+    <nav class="menu">
+      <ul class="menu__list hidden" id="elem">
+        <li class="menu__item"><a class="page-link @@workActive" href="works.html">Works</a></li>
+        <li class="menu__item"><a class="page-link @@blogActive" href="blog.html">Blog</a></li>
+        <li class="menu__item"><a class="page-link @@contactActive" href="index.html">Contact</a></li>
+      </ul>
+      <button class="burger">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+    </nav>  
   </div>
 </header>

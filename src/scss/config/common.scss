@@ -1,1 +1,73 @@
 // Заголовки, общие БЄМ блоки и проче...
+h1 {
+    @include adaptiveClamp (font-size, 44, 32, 1152, 768, 1);
+    font-weight: $titleFontWeight;
+    @include adaptiveClamp (line-height, 60, 40, 1152, 768, 1);
+}
+h2 {
+    @include adaptiveClamp (font-size, 30, 24, 1152, 767, 1);
+    font-weight: $btnFontWeight;
+}
+h3 {
+    @include adaptiveClamp (font-size, 26, 22, 1152, 767, 1);
+    font-weight: $titleFontWeight;
+}
+h4 {
+    @include adaptiveClamp (font-size, $h4FontSize, $h5FontSize, 1152, 768, 1 );
+    font-size: $h4FontSize;
+}
+h5 {
+    @include adaptiveClamp (font-size, 18, 16, 1152, 768, 1);
+    font-size: $h5FontSize;
+}
+ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+a {
+    color: $blackColor;
+    font-weight: $btnFontWeight;
+    font-size: $navHeader;
+}   
+
+li {
+    margin-left: 33px;
+}
+
+.btn  {
+    @include adaptiveClamp (width, 208, 208, 1152, 768, 1);
+    @include adaptiveClamp (height, 47, 47, 1152, 768, 1);
+    @include media(768) {
+    }
+    background-color: $redColor;
+    a {
+      color: $whiteColor;
+      font-size: $navHeader;
+    }
+}
+.date {
+    background-color: #142850;
+    width: 62px;
+    height: 25px;
+    border-radius: 16px;
+    color: $whiteColor;
+    font-weight: $DataFontWeight;
+    padding-left: 10px;
+}
+span {
+    color: $greyLight;
+    @include adaptiveClamp (font-size, 20, 16, 1152, 375, 1);
+}
+
+.img__adapt {
+    @include adaptiveClamp (max-width, 246, 339, 1152, 767, 1);
+    @include adaptiveClamp (max-height, 180, 230, 1152, 767, 1);
+}
+
+.page-link:hover {
+    color: #FF6464;
+}
+.active {
+    color: #FF6464;
+}

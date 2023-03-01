@@ -1,10 +1,10 @@
-$maxWidth: 1920; // максимальная ширина страницы
-$minWidth: 320; // минимальная ширина телефона
-$maxWidthContainer: 1200; // ширина контейнера с учетом padding слева и справа
-$containerWidth: 1160; // ширина контейнера из макета
+$maxWidth: 1920px; // максимальная ширина страницы
+$minWidth: 375px; // минимальная ширина телефона
+$maxWidthContainer: 856px; // ширина контейнера с учетом padding слева и справа
+$containerWidth: 1152px; // ширина контейнера из макета
 
 $mainOffset: 15; // отступы безопасности для контейнера
-$mainFont: ''; // !указать здесь основное семейство шрифта
+$mainFont: 'Heebo'; // !указать здесь основное семейство шрифта
 $mainWeight: 400; // !указать здесь основное начертание шрифта
 
 $headerHeight: 100;
@@ -15,10 +15,32 @@ $mainRadius: rem(10);
 $whiteColor: #fff;
 $blackColor: #131313;
 $grayColor: #6f6f6f;
-$redColor: #ff4040;
+$redColor: #FF6464;
+$generalColor: #21243D;
+$blueLightColor: #EDF7FA;
+$blueColor: #00A8CC;
+$greyLight: #8695A4;
+$primaryColor: #21243D;
+$lightLightGrey: #E0E0E0;
+
 
 $firstAccentColor: $blackColor;
 $secondAccentColor: $redColor;
+
+$h1FontSize: 44px;
+$h2FontSize: 30px;
+$h3FontSize: 26px;
+$h4FontSize: 22px;
+$h5FontSize: 18px;
+$paragraphFontSize: 16px;
+$navHeader: 20px;
+
+
+
+$DataFontWeight: 900;
+$titleFontWeight: 700;
+$btnFontWeight: 500;
+$paragraphFontWeight: 400;
 
 $fontFamily: $mainFont, sans-serif; // Семейство шрифта по умолчанию
 $fontColor: $blackColor; // Цвет шрифта по умолчанию

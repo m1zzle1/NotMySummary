@@ -132,3 +132,9 @@
     @content
   }
 }
+
+@mixin adaptive_after($enterWidth) {
+  @media screen and (min-width: $enterWidth) {
+    @content
+  }
+}

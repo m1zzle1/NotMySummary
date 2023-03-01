@@ -1,0 +1,27 @@
+.blog {
+    @include adaptiveClamp (padding-top, 25, 10, 1152, 375, 1);
+    @include adaptiveClamp (padding-bottom, 25, 25, 1152, 375, 1);
+    &__container {
+        @include adaptiveClamp (max-width, 600, 500, 1152, 767, 1);
+        @include adaptiveClamp (padding-top, 100, 60, 1152, 767, 1);
+        @include adaptiveClamp (padding-bottom, 30, 100, 1152, 767, 1);
+    }
+    &__title {
+        @include adaptiveClamp (font-size, 44, 30, 1152, 375, 1);
+    }
+    &__information__title {
+        @include adaptiveClamp (font-size, 30, 26, 1152, 375, 1);
+    }
+    &__information__data {
+        display: inline-block;
+        color: $generalColor;
+        @include adaptiveClamp (margin-top, 16, 15, 1152, 375, 1);@include adaptiveClamp (margin-bottom, 16, 15, 1152, 375, 1);
+    }
+    .line {
+        margin:0 20px ;
+    }
+    &__information__information {
+        border-bottom: 3px solid $lightLightGrey;
+        padding-bottom: 25px;
+    }
+}

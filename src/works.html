@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Главная'
+  })
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html', {
+        'workActive': 'active',
+      })
+      <main class="page">
+        <section class="featured-works">  
+            <div class="featured-works__container">
+                <div class="featured-works__projects">
+                    <h1>Works</h1>
+                        @@include('html/sections/project-unit.html', {
+                        'title': 'Designing Dashboards',
+                        'year': '2020',
+                        'type': 'Components, Design',
+                        'img_src': 'images/Designing_Dashboards.png'
+                        })
+                        @@include('html/sections/project-unit.html', {
+                        'title': 'Vibrant Portraits of 2020',
+                        'year': '2018',
+                        'type': 'Illustration',
+                        'img_src': 'images/Vibrant-Portraits.png'
+                        })
+                        @@include('html/sections/project-unit.html', {
+                        'title': '36 Days of Malayalam type',
+                        'year': '2018',
+                        'type': 'Typography',
+                        'img_src': 'images/Days-of-Malayala.png'
+                        })
+                        @@include('html/sections/project-unit.html', {
+                        'title': 'Components',
+                        'year': '2018',
+                        'type': 'Components, Design',
+                        'img_src': 'images/components.png'
+                        })
+                </div>
+            </div> 
+        </section>
+        <div data-observ></div>
+        
+      </main>
+      @@include('html/footer.html', {})
+    </div>
+    @@include('html/script.html', {})
+  </body>
+</html> 
